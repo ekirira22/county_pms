@@ -22,7 +22,7 @@ $delayed = $params['counters']['delayed'];
 <div>
     <div>
         <h1 class="main-heading py-16">
-            A County Project Management System
+<!--            A County Project Management System-->
         </h1>
         <h2 class="sub-heading">Dashboard</h2>
     </div>
