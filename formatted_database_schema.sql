@@ -87,7 +87,11 @@ CREATE TABLE IF NOT EXISTS `staff` (
 --
 
 INSERT INTO `staff` (`names`, `dep_id`, `id_number`, `mobile_no`, `email`, `password`, `status`, `user_type`) VALUES
-('John Waweru', 1, '3265478', '0729299382', 'jw@msn.com', 'e10adc3949ba59abbe56e057f20f883e', 'active', 'admin');
+('Eric Maranga', 1, '326547866', '0701234567', 'admin@admin.com', 'e10adc3949ba59abbe56e057f20f883e', 'active', 'admin');
+('Francis Gakere', 2, '898980635', '0712345688', 'co@yahoo.com', 'e10adc3949ba59abbe56e057f20f883e', 'active', 'cec');
+('Osman Yusuf', 2, '4563567356', '0723456789', 'pm@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'active', 'pm');
+('Leah Ochieng', 11, '5674657456', '0734567890', 'cs@outlook.com', 'e10adc3949ba59abbe56e057f20f883e', 'active', 'staff');
+
 
 -- --------------------------------------------------------
 
@@ -179,7 +183,7 @@ CREATE TABLE IF NOT EXISTS `projects` (
 --
 
 INSERT INTO `projects` (`project_name`, `staff_id`, `dep_id`, `sub_id`, `year_id`, `budget`, `pr_status`, `start_date`, `end_date`, `remarks`, `reasons`) VALUES
-('Build a Dam', 1, 1, 1, 1, 300000, 'pending', '2024-04-03', '2024-05-09', 'To build dam', 'N/A');
+('Build a Dam', 1, 1, 1, 1, 300000, 'pending', '2024-04-03', '2024-05-09', 'To build dam', 'Just to name a few');
 
 --
 -- Table structure for table `tasks`

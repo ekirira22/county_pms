@@ -17,7 +17,7 @@
             <img src="assets/img/logo-240.png" alt="" style="width: 100px; height: 100px;">
         </a>
     </div>
-    <div class="main-heading py-32" style="margin-left: 25%;"><h6> COUNTY GOVERNMENT PMS</h6></div>
+    <div class="main-heading py-32" style="margin-left: 25%;"><h6> COUNTY PROJECT MANAGEMENT SYSTEM</h6></div>
 </header>
 <nav class="navbar">
     <ul class="left-nav">
