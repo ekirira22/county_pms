@@ -87,9 +87,9 @@ CREATE TABLE IF NOT EXISTS `staff` (
 --
 
 INSERT INTO `staff` (`names`, `dep_id`, `id_number`, `mobile_no`, `email`, `password`, `status`, `user_type`) VALUES
-('Eric Maranga', 1, '326547866', '0701234567', 'admin@admin.com', 'e10adc3949ba59abbe56e057f20f883e', 'active', 'admin');
-('Francis Gakere', 2, '898980635', '0712345688', 'co@yahoo.com', 'e10adc3949ba59abbe56e057f20f883e', 'active', 'cec');
-('Osman Yusuf', 2, '4563567356', '0723456789', 'pm@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'active', 'pm');
+('Eric Maranga', 1, '326547866', '0701234567', 'admin@admin.com', 'e10adc3949ba59abbe56e057f20f883e', 'active', 'admin'),
+('Francis Gakere', 2, '898980635', '0712345688', 'co@yahoo.com', 'e10adc3949ba59abbe56e057f20f883e', 'active', 'cec'),
+('Osman Yusuf', 2, '4563567356', '0723456789', 'pm@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'active', 'pm'),
 ('Leah Ochieng', 11, '5674657456', '0734567890', 'cs@outlook.com', 'e10adc3949ba59abbe56e057f20f883e', 'active', 'staff');
 
 
