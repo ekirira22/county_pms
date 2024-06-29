@@ -22,14 +22,14 @@ SET time_zone = "+00:00";
 -- Database: `pms`
 --
 
-DELIMITER $$
+-- DELIMITER $$
+-- --
+-- -- Procedures
+-- --
+-- CREATE DEFINER=`root`@`localhost` PROCEDURE `getProjectDetails` ()  SELECT projects.id,projects.project_name,departments.dep_name, sub_counties.sub_name, sub_counties.ward, projects.start_date, projects.end_date
+-- ,projects.budget,financial_years.year_name,projects.pr_status FROM projects JOIN sub_counties ON projects.sub_id = sub_counties.id JOIN departments ON projects.dep_id = departments.id JOIN financial_years ON projects.year_id = financial_years.id ORDER BY projects.id DESC$$
 --
--- Procedures
---
-CREATE DEFINER=`root`@`localhost` PROCEDURE `getProjectDetails` ()  SELECT projects.id,projects.project_name,departments.dep_name, sub_counties.sub_name, sub_counties.ward, projects.start_date, projects.end_date
-,projects.budget,financial_years.year_name,projects.pr_status FROM projects JOIN sub_counties ON projects.sub_id = sub_counties.id JOIN departments ON projects.dep_id = departments.id JOIN financial_years ON projects.year_id = financial_years.id ORDER BY projects.id DESC$$
-
-DELIMITER ;
+-- DELIMITER ;
 
 -- --------------------------------------------------------
 

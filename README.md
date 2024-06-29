@@ -8,7 +8,7 @@
 
 **Project Title**: County Project Management System
 
-[Live Link](https://cpms.primehosting.co.ke)
+[Live Link](https://countypms.azurewebsites.net/)
 
 **Brief**: This research project aims to develop a secure county government project management system to streamline project execution, 
 eliminate human errors, and ensure compliance with government policies, covering project details such as budgets and deadlines.
