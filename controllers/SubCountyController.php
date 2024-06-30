@@ -86,7 +86,7 @@ class SubCountyController extends Controller
         $this->setLayout('app');
 
         /*Fetches The subcountys data by passing the id to the findById method which is called statically via subcountyModel*/
-        $sub_counties = SubCountyModel::findById($request->getReqId());
+        $sub_counties = (new \app\models\SubCountyModel)->findById($request->getReqId());
 
         //renders the view along with the passed params
         return $this->render('../app/sub_counties/sub_edit', [
@@ -142,7 +142,7 @@ class SubCountyController extends Controller
          * First We log the Users' activity using the static class in DbModel
          * We first get the name of the subcounty being deleted, this is done before deletion
          */
-        $sub_info = SubCountyModel::findById($sub_id);
+        $sub_info = (new \app\models\SubCountyModel)->findById($sub_id);
         
         DbModel::logUserActivity('deleted a sub-county - ' . $sub_info->sub_name);
 

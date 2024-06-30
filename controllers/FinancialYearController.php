@@ -84,7 +84,7 @@ class FinancialYearController extends Controller
         //sets the layout
         $this->setLayout('app');
         //fetches all financial years where the id is the id getted
-        $f_years = FinancialModel::findById($request->getReqId());
+        $f_years = (new \app\models\FinancialModel)->findById($request->getReqId());
 
         //renders the view along the object of fetched information
         return $this->render('../app/financial_years/fy_edit', [
@@ -137,7 +137,7 @@ class FinancialYearController extends Controller
          * First We log the Users' activity using the static class in DbModel before delete is executed
          * We get the year name being deleted
          */
-        $f_year_info = FinancialModel::findById($request->getReqId());
+        $f_year_info = (new \app\models\FinancialModel)->findById($request->getReqId());
         DbModel::logUserActivity('deleted a financial year - ' . $f_year_info->year_name);
 
         $delete = $f_year->deleteById($request->getReqId());

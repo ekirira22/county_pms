@@ -89,7 +89,7 @@ class DepartmentController extends Controller
         $this->setLayout('app');
 
         /*Fetches The Departments data by passing the id to the findById method which is called statically via DepartmentModel*/
-        $departments = DepartmentModel::findOneRecord(['id' => $request->getReqId()]);
+        $departments = (new \app\models\DepartmentModel)->findOneRecord(['id' => $request->getReqId()]);
 
         if($request->getMethod() === "post")
         {
@@ -142,7 +142,7 @@ class DepartmentController extends Controller
          * First We log the Users' activity using the static class in DbModel
          * We first get the name of the department being deleted, this is done before deletion
          */
-        $dep_info = DepartmentModel::findById($departmentId);
+        $dep_info = (new \app\models\DepartmentModel)->findById($departmentId);
         DbModel::logUserActivity('deleted a department - ' . $dep_info->dep_name);
 
         /*
