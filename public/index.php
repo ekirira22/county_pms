@@ -10,7 +10,7 @@ use app\controllers\FinancialYearController;
 use app\controllers\SubCountyController;
 use app\controllers\ProjectController;
 use app\controllers\TaskController;
-
+//phpinfo();
 
 /*
  * An instance of Application is run, we pass directory name of current directory using magic constant
@@ -19,7 +19,7 @@ use app\controllers\TaskController;
 
 $config = [
     'db' => [
-        'dsn' => 'mysql:host=localhost;port=3306;dbname=pms',
+        'dsn' => 'mysql:host=127.0.0.1;port=3306;dbname=pms',
         'user' => 'root',
         'password' => '',
     ]
