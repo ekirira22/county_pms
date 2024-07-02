@@ -19,9 +19,9 @@ use app\controllers\TaskController;
 
 $config = [
     'db' => [
-        'dsn' => 'mysql:host=127.0.0.1;port=3306;dbname=pms',
-        'user' => 'root',
-        'password' => '',
+        'dsn' => 'mysql:host={AZURE_MYSQL_HOST};port={AZURE_MYSQL_PORT};dbname={AZURE_MYSQL_DBNAME}',
+        'user' => '{AZURE_MYSQL_USERNAME}',
+        'password' => '{AZURE_MYSQL_PASSWORD}',
     ]
 ];
 
