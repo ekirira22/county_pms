@@ -24,12 +24,18 @@ class Database
         $dsn = $config['dsn'] ?? '';
         $user = $config['user'] ?? '';
         $pass = $config['password'] ?? '';
+        $ssl_ca = $config['ssl_ca'] ?? '';
+
+        $options = [
+            \PDO::MYSQL_ATTR_SSL_CA => $ssl_ca,
+            \PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION
+        ];
 
         /*
          * Creates a new pdo connection
          */
 
-        $this->pdo = new \PDO($dsn, $user, $pass);
+        $this->pdo = new \PDO($dsn, $user, $pass, $options);
         //we set the default pdo attribute error mode to error mode exception, meaning errors
         //are outputted in case of any bad connection
         $this->pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
