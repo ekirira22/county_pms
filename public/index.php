@@ -20,8 +20,8 @@ use app\controllers\TaskController;
 $config = [
     'db' => [
         'dsn' => 'mysql:host=county-server.mysql.database.azure.com;port=3306;dbname=county-database',
-        'user' => 'xjzicwqsds',
-        'password' => 'ouigT4G$UmcXnpD5',
+        'user' => 'lvtduynriz',
+        'password' => '$YaxX$ct$9ytEYLr',
     ]
 ];
 
