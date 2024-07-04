@@ -35,7 +35,7 @@ jobs:
         run: zip release.zip ./* -r
 
       - name: Upload artifact for deployment job
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v3
         with:
           name: php-app
           path: release.zip
@@ -51,7 +51,7 @@ jobs:
 
     steps:
       - name: Download artifact from build job
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v3
         with:
           name: php-app
 
@@ -59,14 +59,14 @@ jobs:
         run: unzip release.zip
       
       - name: Login to Azure
-        uses: azure/login@v2
+        uses: azure/login@v1
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_DB9BDFA3573F487DA026859D3102CB6F }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_34C1D6E60F974A7F83971FE5A1098381 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_5F16DCE029124F4B928557C8B3A6EDBD }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_B7CCA774E9C34DA2B8F4D6D00AB3E980 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_0540FBBC14EC4E69942F1D2F05414A8E }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_A97A7BB77F044EF8B03141A6998E8DB2 }}
 
       - name: 'Deploy to Azure Web App'
-        uses: azure/webapps-deploy@v3
+        uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
         with:
           app-name: 'countypms'
