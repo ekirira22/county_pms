@@ -16,15 +16,20 @@ use app\controllers\TaskController;
  * An instance of Application is run, we pass directory name of current directory using magic constant
  * __DIR__ so that we can always call root directory from Application class constructor, we also pass the db configuration
  */
+$host = getenv('AZURE_MYSQL_HOST');
+$port = getenv('AZURE_MYSQL_PORT');
+$db_name = getenv('AZURE_MYSQL_DBNAME');
+$user = getenv('AZURE_MYSQL_USERNAME');
+$pass = getenv('AZURE_MYSQL_PASSWORD');
 
 $config = [
     'db' => [
-        'dsn' => 'mysql:host=county-server.mysql.database.azure.com;port=3306;dbname=county-database',
-        'user' => 'lvtduynriz',
-        'password' => '$YaxX$ct$9ytEYLr',
+        'dsn' => 'mysql:host={$host};port={$port};dbname={$db_name}',
+        'user' => $user,
+        'password' => $pass,
     ]
 ];
-
+var_dump($config);
 $app = new Application(dirname(__DIR__), $config);
 
 /*
