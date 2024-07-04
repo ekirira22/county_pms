@@ -29,7 +29,7 @@ $config = [
         'password' => $pass,
     ]
 ];
-var_dump($config);
+
 $app = new Application(dirname(__DIR__), $config);
 
 /*
