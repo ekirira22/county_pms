@@ -101,9 +101,9 @@ $tasks = $params['model']['tasks'];
         </div>
     </div>
 
-<!--    We want to display this isn such a way that only the admin and staff in charge of the project can add tasks-->
+<!--    We want to display this in such a way that only the admin and staff in charge of the project can add tasks-->
 
-    <?php if (in_array(Application::$app->user->user_type, ['staff', 'admin'])):?>
+    <?php if (in_array(Application::$app->user->user_type, ['staff', 'admin', 'pm'])):?>
         <?php if ($project->budget !=0 ): ?>
             <hr>
             <form action="" method="post">
