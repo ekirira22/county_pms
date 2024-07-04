@@ -1,3 +1,3 @@
 <?php
 
-echo "Hello Azure! This is cool!";
+echo "CPMS: Failed to Load index.php in public/ folder. Check your nginx configurations";
