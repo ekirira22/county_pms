@@ -24,7 +24,7 @@ $pass = getenv('AZURE_MYSQL_PASSWORD');
 
 $config = [
     'db' => [
-        'dsn' => 'mysql:host={$host};port={$port};dbname={$db_name}',
+        'dsn' => 'mysql:host=' . $host . ';port=' . $port . ';dbname=' . $db_name,
         'user' => $user,
         'password' => $pass,
     ]
