@@ -21,14 +21,13 @@ $port = getenv('AZURE_MYSQL_PORT');
 $db_name = getenv('AZURE_MYSQL_DBNAME');
 $user = getenv('AZURE_MYSQL_USERNAME');
 $pass = getenv('AZURE_MYSQL_PASSWORD');
-$ssl_ca = getenv('MYSQL_ATTR_SSL_CA');
 
 $config = [
     'db' => [
         'dsn' => 'mysql:host=' . $host . ';port=' . $port . ';dbname=' . $db_name,
         'user' => $user,
         'password' => $pass,
-        'ssl_ca' => $ssl_ca,
+        'ssl_ca' => __DIR__ . '/../ssl/DigiCertGlobalRootCA.crt.pem',
     ]
 ];
 
