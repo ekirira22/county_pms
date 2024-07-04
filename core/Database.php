@@ -35,7 +35,7 @@ class Database
          * Creates a new pdo connection
          */
 
-        $this->pdo = new \PDO($dsn, $user, $pass, $options);
+        $this->pdo = new \PDO($dsn, $user, $pass);
         //we set the default pdo attribute error mode to error mode exception, meaning errors
         //are outputted in case of any bad connection
         $this->pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
